@@ -1,0 +1,13 @@
+<div *ngFor="let item of items | orderBy: created_at : reverse |  paginate: { itemsPerPage: 10, currentPage: p };let i=index">
+  <div *ngIf="i<4">
+    <div class="card col col-12" >
+      <p><iframe width="100%"  height="400" [src]="'https://www.youtube.com/embed/'+item.idYoutube | safe:'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <a href="#" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+</div>
+</div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
