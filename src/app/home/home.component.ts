@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
+  created_at: any;
+  reverse:any;
   ageValue: number = 0;
   searchValue: string = "";
   items: Array<any>;
